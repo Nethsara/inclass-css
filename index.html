@@ -64,6 +64,30 @@
       .helloclass[href="test"] {
         color: azure;
       }
+
+      /* ---- Psedo Selectors ---- */
+      /* single colon : class selectors -> add style to status of an element */
+      h1 :hover {
+        color: coral;
+      }
+
+      h1:active {
+        color: lawngreen;
+      }
+
+      a:visited {
+        color: orange0;
+      }
+
+      :focus {
+        background-color: goldenrod;
+      }
+
+      h1:last-child {
+        color: red;
+      }
+
+      /* double colon :: active -> add styles to specific part of an element */
     </style>
   </head>
   <body>
@@ -98,5 +122,22 @@
     </p>
 
     <h2>I am a H2</h2>
+
+    <form>
+      <label for="username">Name</label>
+      <input type="text" name="username" id="username" />
+      <br /><br />
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" />
+      <br /><br />
+      <label for="file">File Upload</label>
+      <input type="file" name="file" id="file" />
+      <br /><br />
+      <input type="submit" />
+    </form>
+
+    <ol>
+      <li>CSS</li>
+    </ol>
   </body>
 </html>
