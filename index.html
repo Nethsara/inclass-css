@@ -31,6 +31,39 @@
       [data="myh1"] {
         color: blue;
       }
+
+      /*-- Attribute Selector with value --*/
+      [href = "https://yahoo.com"]
+      {
+        color: orange;
+      }
+
+      /*-- Attribute Selector with starting value --*/
+      [href^="https"] {
+        color: red;
+      }
+
+      /*-- Attribute Selector with ending value --*/
+      [href$=".com"] {
+        color: purple;
+      }
+
+      [href*="guide"] {
+        color: gold;
+      }
+
+      [href~="verify"] {
+        color: darkslategray;
+      }
+
+      /* ---- Class selector with tag ---- */
+      h1[class="myh1"] {
+        color: aqua;
+      }
+
+      .helloclass[href="test"] {
+        color: azure;
+      }
     </style>
   </head>
   <body>
@@ -40,6 +73,13 @@
       aliquam beatae enim quidem, amet cupiditate molestias cumque nulla debitis
       ea! Quidem aperiam fugiat nobis in fuga voluptatem atque iusto?
     </p>
+
+    <br />
+    <a href="http://yahoo.com"> I am Yahoo</a>
+
+    <a href="https://google.com/guide">^ Selector (Starts With)</a>
+
+    <a href="http://siyum.com/js verify">$ Selector Ends With</a>
 
     <h1 data="myh1">Welcome To HTML</h1>
     <p class="paragraph">
