@@ -66,7 +66,7 @@
       }
 
       /* ---- Psedo Selectors ---- */
-      /* single colon : class selectors -> add style to status of an element */
+      /* single colon : class selectors -> add style to state : status/location of an element */
       h1 :hover {
         color: coral;
       }
@@ -87,7 +87,52 @@
         color: red;
       }
 
-      /* double colon :: active -> add styles to specific part of an element */
+      /* double colon :: active -> add styles to specific part of an element pseudo element selector */
+      /*---- before the element ----*/
+      h1::before {
+        content: "🎯 Topic: ";
+      }
+
+      /*---- after the element ----*/
+      h1::after {
+        content: " -- Guide";
+      }
+
+      /*---- first letter of the element ----*/
+      p::first-letter {
+        color: goldenrod;
+        font-size: 20px;
+      }
+
+      p[class="paragraph p1"]::first-line {
+        color: red;
+      }
+
+      ::placeholder {
+        color: red;
+      }
+
+      input[name="username"]::placeholder {
+        color: limegreen;
+      }
+
+      ::file-selector-button {
+        background-color: aqua;
+        cursor: pointer;
+      }
+
+      ::file-selector-button:hover {
+        background-color: cornflowerblue;
+      }
+
+      ::selection {
+        color: hotpink;
+      }
+
+      /* marker - styles markers in the html lists */
+      ::marker {
+        content: "❤️";
+      }
     </style>
   </head>
   <body>
@@ -106,7 +151,7 @@
     <a href="http://siyum.com/js verify">$ Selector Ends With</a>
 
     <h1 data="myh1">Welcome To HTML</h1>
-    <p class="paragraph">
+    <p class="paragraph p1">
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio dolorum
       ipsum harum officiis quidem molestias voluptatibus dolores veniam omnis,
       non eum totam fugit provident quaerat? Cumque tenetur accusamus magnam
@@ -125,10 +170,20 @@
 
     <form>
       <label for="username">Name</label>
-      <input type="text" name="username" id="username" />
+      <input
+        type="text"
+        name="username"
+        id="username"
+        placeholder="Enter Username"
+      />
       <br /><br />
       <label for="password">Password</label>
-      <input type="password" name="password" id="password" />
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Enter Pass"
+      />
       <br /><br />
       <label for="file">File Upload</label>
       <input type="file" name="file" id="file" />
